@@ -40,6 +40,15 @@ log.file = fs::path_expand(log.file)
 ## module load R/3.4.1/gcc
 ## module load R/3.5.1-intel-2017b-X11-20171023
 
+## Print SLURM_JOB_ID and SLURM_JOB_NODELIST
+if [ X"$SLURM_STEP_ID" = "X" -a X"$SLURM_PROCID" = "X"0 ]
+then
+  echo "### =========================================="
+  echo "### SLURM_JOB_ID = $SLURM_JOB_ID"
+  echo "### SLURM_JOB_NODELIST = $SLURM_JOB_NODELIST"
+  echo "### =========================================="
+fi
+
 ## Export value of DEBUGME environemnt var to slave
 export DEBUGME=<%= Sys.getenv("DEBUGME") %>
 
