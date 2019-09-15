@@ -40,12 +40,17 @@ log.file = fs::path_expand(log.file)
 ## module load R/3.4.1/gcc
 ## module load R/3.5.1-intel-2017b-X11-20171023
 
-## Print SLURM_JOB_ID and SLURM_JOB_NODELIST
+## Print
 if [ X"$SLURM_STEP_ID" = "X" -a X"$SLURM_PROCID" = "X"0 ]
 then
   echo "### =========================================="
-  echo "### SLURM_JOB_ID = $SLURM_JOB_ID"
-  echo "### SLURM_JOB_NODELIST = $SLURM_JOB_NODELIST"
+  echo "### SLURM_SUBMIT_DIR    = $SLURM_SUBMIT_DIR"
+  echo "### SLURM_JOB_ID        = $SLURM_JOB_ID"
+  echo "### SLURM_JOB_PARTITION = $SLURM_JOB_PARTITION"
+  echo "### SLURM_JOB_NODELIST  = $SLURM_JOB_NODELIST"
+  echo "### SLURM_NTASKS        = $SLURM_NTASKS"
+  echo "### SLURM_CPUS_PER_TASK = $SLURM_CPUS_PER_TASK"
+  echo "### SLURM_MEM_PER_CPU   = $SLURM_MEM_PER_CPU"
   echo "### =========================================="
 fi
 
