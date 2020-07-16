@@ -32,6 +32,7 @@ log.file = fs::path_expand(log.file)
 #SBATCH --mem-per-cpu=<%= resources$memory %>
 #SBATCH --partition=<%= resources$partition %>
 #SBATCH -A liu
+<%= if (!is.null(resources$nodelist)) paste0("#SBATCH --nodelist=", resources$nodelist) else "" %>
 <%= if (array.jobs) sprintf("#SBATCH --array=1-%i", nrow(jobs)) else "" %>
 
 ## Initialize work environment like
