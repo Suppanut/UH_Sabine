@@ -7,4 +7,4 @@ I first learn about batchtools from https://hpcc.ucr.edu/manuals_linux-cluster_p
 
 Original template script can be downloaded from https://github.com/mllg/batchtools/blob/master/inst/templates/slurm-simple.tmpl
 
-
+test
