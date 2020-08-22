@@ -6,5 +6,3 @@ This repository contains templates of R package "batchtools" which greatly helps
 I first learn about batchtools from https://hpcc.ucr.edu/manuals_linux-cluster_parallelR.html
 
 Original template script can be downloaded from https://github.com/mllg/batchtools/blob/master/inst/templates/slurm-simple.tmpl
-
-test
