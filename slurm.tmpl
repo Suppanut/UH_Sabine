@@ -31,7 +31,7 @@ log.file = fs::path_expand(log.file)
 #SBATCH --cpus-per-task=<%= resources$ncpus %>
 #SBATCH --mem-per-cpu=<%= resources$memory %>
 #SBATCH --partition=<%= resources$partition %>
-#SBATCH -A liu
+#SBATCH -A master
 <%= if (!is.null(resources$exclude)) paste0("#SBATCH --exclude=", resources$exclude) else "" %>
 <%= if (!is.null(resources$nodelist)) paste0("#SBATCH --nodelist=", resources$nodelist) else "" %>
 <%= if (array.jobs) sprintf("#SBATCH --array=1-%i", nrow(jobs)) else "" %>
